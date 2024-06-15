@@ -37,15 +37,21 @@ header nav ul li a {
     position: relative;
     text-align: center;
     color: white;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #background-video {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
     min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
 }
 
 .hero-text {
