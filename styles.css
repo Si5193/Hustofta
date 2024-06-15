@@ -2,13 +2,15 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
+    box-sizing: border-box;
 }
 
 .header {
-    background-color: #333;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    color: #fff;
     padding: 20px 0;
     position: relative;
+    z-index: 10;
 }
 
 .container {
@@ -21,8 +23,7 @@ body {
 }
 
 .logo img {
-    width: 150px;
-    height: auto;
+    height: 60px;
 }
 
 nav ul {
@@ -30,21 +31,26 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 20px;
 }
 
 nav ul li {
-    margin-left: 20px;
+    position: relative;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ccc;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
 }
 
 .video-container {
@@ -52,12 +58,12 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
 }
 
-video {
+#background-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -70,54 +76,74 @@ video {
 
 .hero {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    color: #fff;
 }
 
 .hero-content {
-    color: #fff;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .services {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-around;
 }
 
 .service {
-    margin: 0 15px;
     text-align: center;
-}
-
-.service i {
-    font-size: 40px;
-    margin-bottom: 10px;
 }
 
 .service h3 {
-    font-size: 24px;
-    margin: 0;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
-footer {
-    text-align: center;
+.facebook-feed {
+    background: #fff;
+    color: #333;
     padding: 20px;
-    background-color: #333;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-footer p {
-    margin: 5px 0;
+.facebook-feed h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+#fb-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-footer a:hover {
-    color: #ccc;
+.fb-post {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fb-post p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.fb-post time {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
 }
