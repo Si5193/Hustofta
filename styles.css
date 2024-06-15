@@ -57,19 +57,20 @@ nav a {
     position: relative;
     color: white;
     text-align: center;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
 }
 
 .services {
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px;
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-around;
 }
 
 .service {
-    display: inline-block;
-    width: 30%;
+    flex: 1;
     margin: 10px;
 }
 
@@ -97,5 +98,9 @@ footer a {
 
     .hero-content {
         padding: 20px;
+    }
+
+    .services {
+        flex-direction: column;
     }
 }
