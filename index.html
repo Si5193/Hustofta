@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smidesföretag</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -18,14 +18,17 @@
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
         </nav>
-        <img src="https://i.imgur.com/mPm0gZh.png" alt="Logga" class="logo">
+        <div class="logo-container">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logga" class="logo">
+        </div>
     </header>
     <main>
         <section class="hero">
-            <video autoplay muted loop id="background-video">
+            <video autoplay muted loop id="heroVideo">
                 <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
+                Din webbläsare stödjer inte videouppspelning.
             </video>
-            <div class="hero-text">
+            <div class="hero-content">
                 <h1>Välkommen till vårt smidesföretag</h1>
                 <p>Vi erbjuder högkvalitativt smidesarbete för alla dina behov.</p>
             </div>
@@ -33,12 +36,12 @@
         <section class="services">
             <h2>Våra tjänster</h2>
             <div class="service">
-                <i class="fas fa-fence"></i>
+                <i class="fa-solid fa-fence"></i>
                 <h3>Räcken</h3>
                 <p>Kvalitetsräcken för alla typer av fastigheter.</p>
             </div>
             <div class="service">
-                <i class="fas fa-door-open"></i>
+                <i class="fa-solid fa-door-open"></i>
                 <h3>Grindar</h3>
                 <p>Skräddarsydda grindar för ökad säkerhet och stil.</p>
             </div>
