@@ -6,9 +6,9 @@ body {
 }
 
 .header {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    background: rgba(0, 0, 0, 0.6); /* Transparent bakgrund */
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0; /* Mindre padding */
     position: relative;
     z-index: 10;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .logo img {
-    height: 60px;
+    height: 50px; /* Mindre höjd för logon */
 }
 
 nav ul {
@@ -31,7 +31,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Mindre gap */
 }
 
 nav ul li {
@@ -42,8 +42,8 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px; /* Mindre textstorlek */
+    padding: 8px 15px; /* Mindre padding */
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -105,45 +105,4 @@ nav ul li a:hover {
 .service h3 {
     margin-top: 10px;
     font-size: 18px;
-}
-
-.facebook-feed {
-    background: #fff;
-    color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-.facebook-feed h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-#fb-posts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.fb-post {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 calc(33.333% - 40px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.fb-post p {
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-.fb-post time {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #999;
 }
