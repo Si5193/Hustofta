@@ -95,8 +95,8 @@ header .logo img {
 }
 
 .service {
-    background: #fff;
-    color: #000;
+    background: none;
+    color: #fff;
     padding: 20px;
     border-radius: 8px;
     width: 30%;
