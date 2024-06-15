@@ -51,6 +51,26 @@
                     </div>
                 </div>
             </section>
+            <section class="quote-form">
+                <div class="form-container">
+                    <h2>Offertförfrågan</h2>
+                    <form action="submit_quote.php" method="post">
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-post:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Telefon:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="details">Beskrivning av projekt:</label>
+                        <textarea id="details" name="details" rows="4" required></textarea>
+
+                        <button type="submit">Skicka förfrågan</button>
+                    </form>
+                </div>
+            </section>
         </main>
         <footer>
             <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
