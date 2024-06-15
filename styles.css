@@ -81,10 +81,12 @@ header {
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .service {
     text-align: center;
+    flex: 1 1 100px;
 }
 
 .service i {
@@ -159,5 +161,25 @@ footer {
 
     .nav-links.active {
         display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .quote-section {
+        padding: 40px 10px;
+    }
+
+    .quote-form {
+        padding: 15px;
+    }
+
+    .quote-form input, .quote-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .quote-form button {
+        font-size: 0.9rem;
     }
 }
