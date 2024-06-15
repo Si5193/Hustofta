@@ -1,5 +1,8 @@
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -13,6 +16,7 @@ header {
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
@@ -44,17 +48,65 @@ header nav ul li a {
     z-index: -1;
 }
 
+.hero-text {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
 .services {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
+    padding: 0 20px;
 }
 
 .service {
     text-align: center;
+    flex-basis: 30%;
+    margin: 10px 0;
 }
 
 .service i {
     font-size: 40px;
     margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.8); /* Grå bar med genomskinlighet */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        flex-basis: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
 }
