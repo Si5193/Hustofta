@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smidesföretag</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logga" class="logo">
-        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Hem</a></li>
@@ -21,35 +17,40 @@
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
         </nav>
+        <div class="logo">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
+        </div>
     </header>
-    <section class="hero">
-        <video autoplay muted loop id="heroVideo">
-            <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
-            Din webbläsare stödjer inte videouppspelning.
-        </video>
-        <div class="hero-content">
-            <h1>Välkommen till vårt smidesföretag</h1>
-            <p>Vi erbjuder högkvalitativt smidesarbete för alla dina behov.</p>
-            <div class="services">
+    <main>
+        <section class="hero">
+            <video autoplay muted loop id="background-video">
+                <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>Välkommen till vårt smidesföretag</h1>
+                <p>Vi erbjuder högkvalitativt smidesarbete för alla dina behov.</p>
                 <h2>Våra tjänster</h2>
-                <div class="service">
-                    <i class="fa-solid fa-fence"></i>
-                    <h3>Räcken</h3>
-                    <p>Kvalitetsräcken för alla typer av fastigheter.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-solid fa-door-open"></i>
-                    <h3>Grindar</h3>
-                    <p>Skräddarsydda grindar för ökad säkerhet och stil.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-solid fa-xmarks-lines"></i>
-                    <h3>Staket</h3>
-                    <p>Robusta och estetiskt tilltalande staket.</p>
+                <div class="services">
+                    <div class="service">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <h3>Räcken</h3>
+                        <p>Kvalitetsräcken för alla typer av fastigheter.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fa-solid fa-door-open"></i>
+                        <h3>Grindar</h3>
+                        <p>Skräddarsydda grindar för ökad säkerhet och stil.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fa-solid fa-xmarks-lines"></i>
+                        <h3>Staket</h3>
+                        <p>Robusta och estetiskt tilltalande staket.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
         <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
