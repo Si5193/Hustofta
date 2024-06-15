@@ -5,60 +5,12 @@ body {
     box-sizing: border-box;
 }
 
-.header {
-    background: rgba(0, 0, 0, 0.6); /* Transparent bakgrund */
-    color: #fff;
-    padding: 10px 0; /* Mindre padding */
-    position: relative;
-    z-index: 10;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo img {
-    height: 50px; /* Mindre höjd för logon */
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px; /* Mindre gap */
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px; /* Mindre textstorlek */
-    padding: 8px 15px; /* Mindre padding */
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background: #fff;
-    color: #000;
-    border-radius: 5px;
-}
-
 .video-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     z-index: -1;
 }
@@ -69,103 +21,148 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
-.content {
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     position: relative;
-    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    height: 100vh;
-    color: #fff;
+    padding: 100px 20px;
+    color: white;
 }
 
 .hero-content {
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .services {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 }
 
 .service {
     text-align: center;
 }
 
-.service h3 {
-    margin-top: 10px;
-    font-size: 18px;
+.service i {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.quote-form {
-    background: #f9f9f9;
-    padding: 40px 20px;
+.quote-form-section {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
     text-align: center;
 }
 
-.form-container {
+.quote-form-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-container h2 {
-    font-family: 'Montserrat', sans-serif;
+.quote-form h2 {
     margin-bottom: 20px;
 }
 
-.form-container label {
+.quote-form label {
     display: block;
-    text-align: left;
     margin: 10px 0 5px;
 }
 
-.form-container input, .form-container textarea {
+.quote-form input, 
+.quote-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.form-container button {
-    padding: 10px 20px;
+    margin-bottom: 15px;
     border: none;
-    background: #333;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s ease;
 }
 
-.form-container button:hover {
-    background: #555;
+.quote-form button {
+    padding: 10px 20px;
+    background: #ff9900;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background: #333;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-
-footer p {
-    margin: 5px 0;
+    color: white;
 }
