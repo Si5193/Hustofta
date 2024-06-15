@@ -1,87 +1,78 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+    height: 100%;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    background: rgba(50, 50, 50, 0.8); /* Transparent grå bar */
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
 }
 
-header nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav ul li {
+    margin-right: 20px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li a {
     text-decoration: none;
+    color: #fff;
 }
 
-main {
-    padding: 20px;
+.logo {
+    height: 40px; /* Justera storleken efter behov */
 }
 
 .hero {
-    text-align: center;
-    background: url('smidesarbete.jpg') no-repeat center center/cover;
-    color: #fff;
     padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
 }
 
 .services {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
 }
 
 .service {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 footer {
-    background-color: #333;
+    background: rgba(50, 50, 50, 0.8);
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
+    position: relative;
+    z-index: 1;
 }
