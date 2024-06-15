@@ -1,44 +1,42 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(128, 128, 128, 0.8); /* Grå bar med genomskinlighet */
     padding: 10px 20px;
-    z-index: 1000;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
+header nav ul {
+    list-style: none;
     padding: 0;
-    display: flex;
 }
 
-nav ul li {
-    margin-right: 20px;
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
 }
 
-nav ul li a {
-    color: white;
+header nav ul li a {
     text-decoration: none;
-    font-size: 16px;
+    color: #000;
 }
 
 .logo {
-    height: 80px; /* Adjust the height as needed */
+    height: 50px;
 }
 
-#bg-video {
-    position: fixed;
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#background-video {
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -46,40 +44,17 @@ nav ul li a {
     z-index: -1;
 }
 
-.hero {
-    text-align: center;
-    color: white;
-    padding: 100px 20px;
-}
-
 .services {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-}
-
-.services h2 {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .service {
-    margin-bottom: 30px;
-}
-
-.service img {
-    display: block;
-    margin: 0 auto 10px;
-}
-
-.service h3 {
-    margin: 10px 0;
-}
-
-footer {
     text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    position: relative;
-    z-index: 1000;
+}
+
+.service i {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
