@@ -57,21 +57,26 @@ nav a {
     position: relative;
     color: white;
     text-align: center;
-    top: 20%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
 .services {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #f9f9f9;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .service {
-    flex: 1;
+    flex: 1 1 30%;
     margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .service i {
@@ -94,6 +99,7 @@ footer a {
 @media (max-width: 768px) {
     .service {
         width: 90%;
+        margin: 10px auto;
     }
 
     .hero-content {
