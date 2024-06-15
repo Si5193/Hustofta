@@ -6,7 +6,7 @@
     <title>Smidesföretag</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="video-container">
@@ -16,20 +16,21 @@
         </video>
     </div>
     <div class="content">
-        <header class="header">
-            <div class="container">
+        <header>
+            <nav>
                 <div class="logo">
                     <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Hem</a></li>
-                        <li><a href="about.html">Om oss</a></li>
-                        <li><a href="quote.html">Offertförfrågan</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="menu-icon" id="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="quote.html">Offertförfrågan</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section class="hero">
@@ -51,23 +52,23 @@
                     </div>
                 </div>
             </section>
-            <section class="quote-form">
-                <div class="form-container">
-                    <h2>Offertförfrågan</h2>
-                    <form action="submit_quote.php" method="post">
-                        <label for="name">Namn:</label>
+            <section class="quote-form-section" style="background-image: url('https://images.pexels.com/photos/2760344/pexels-photo-2760344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                <div class="quote-form-container">
+                    <h2>Få en Offert</h2>
+                    <form action="submit_quote.php" method="post" class="quote-form">
+                        <label for="name">Namn</label>
                         <input type="text" id="name" name="name" required>
-
-                        <label for="email">E-post:</label>
+                        
+                        <label for="email">E-post</label>
                         <input type="email" id="email" name="email" required>
-
-                        <label for="phone">Telefon:</label>
+                        
+                        <label for="phone">Telefon</label>
                         <input type="tel" id="phone" name="phone" required>
-
-                        <label for="details">Beskrivning av projekt:</label>
-                        <textarea id="details" name="details" rows="4" required></textarea>
-
-                        <button type="submit">Skicka förfrågan</button>
+                        
+                        <label for="message">Meddelande</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Skicka</button>
                     </form>
                 </div>
             </section>
@@ -77,5 +78,11 @@
             <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
         </footer>
     </div>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
