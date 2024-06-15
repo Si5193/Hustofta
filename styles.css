@@ -9,102 +9,78 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     overflow: hidden;
     z-index: -1;
 }
 
 #background-video {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
+.content {
+    position: relative;
+    z-index: 1;
 }
 
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
     position: relative;
 }
 
-nav ul {
+.logo img {
+    height: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.nav-links li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-links a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-nav .logo img {
-    height: 50px;
-}
-
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-icon i {
-    font-size: 2rem;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: none;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .menu-icon {
-        display: block;
-    }
+    font-weight: 700;
 }
 
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
     text-align: center;
-    padding: 100px 20px;
-    color: white;
+    color: #fff;
+    padding: 20px;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .services {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .service {
@@ -116,53 +92,72 @@ nav .logo img {
     margin-bottom: 10px;
 }
 
-.quote-form-section {
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    color: white;
+.quote-section {
+    background: url('https://images.pexels.com/photos/2760344/pexels-photo-2760344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: #fff;
     text-align: center;
 }
 
-.quote-form-container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 600px;
+.quote-form {
+    max-width: 500px;
     margin: 0 auto;
-}
-
-.quote-form h2 {
-    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .quote-form label {
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
-.quote-form input, 
-.quote-form textarea {
+.quote-form input, .quote-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 5px;
 }
 
 .quote-form button {
-    padding: 10px 20px;
-    background: #ff9900;
+    display: block;
+    width: 100%;
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    color: white;
+    background: #f1c40f;
+    color: #000;
     font-size: 1rem;
     cursor: pointer;
 }
 
+.quote-form button:hover {
+    background: #e2b607;
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
