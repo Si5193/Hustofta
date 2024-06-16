@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/2760344/pexels-photo-2760344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn {
+    margin: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+}
