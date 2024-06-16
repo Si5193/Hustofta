@@ -4,57 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smidesföretag</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <a class="navbar-brand" href="#">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Hem</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">Om oss</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="quote.html">Offertförfrågan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Kontakt</a>
-                </li>
-            </ul>
+    <header>
+        <div class="logo">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
         </div>
+        <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Offertförfrågan</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
-
     <div class="video-container">
         <video autoplay muted loop playsinline id="background-video">
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-
-    <div class="hero">
-        <div class="container text-center">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="hero-logo">
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-warning btn-lg">Kontakta oss</a>
-                <a href="quote.html" class="btn btn-warning btn-lg">Begär offert</a>
-            </div>
+    <div class="hero-content">
+        <div class="logo-center">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
+        </div>
+        <div class="buttons">
+            <a href="contact.html" class="button">Kontakta oss</a>
+            <a href="quote.html" class="button">Begär offert</a>
         </div>
     </div>
-
-    <footer class="bg-transparent text-white text-center">
+    <footer>
         <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
-        <p>Kontakt: <a href="tel:+46761072796" class="text-white">076-1072796</a> | <a href="mailto:info@hustoftasmide.se" class="text-white">info@hustoftasmide.se</a></p>
+        <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popper
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
