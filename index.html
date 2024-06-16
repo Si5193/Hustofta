@@ -4,55 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smidesföretag</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
         .logo-center {
             margin: 0 auto;
         }
+        .header, .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .footer a {
+            color: orange;
+        }
     </style>
 </head>
-<body class="font-roboto bg-gray-100">
-    <header class="bg-gray-800 p-4 text-white flex justify-between items-center">
-        <div class="logo">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="h-12">
-        </div>
-        <nav>
-            <button id="hamburger-menu" class="text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
+<body>
+    <header class="header p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="h-12">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul id="menu" class="hidden md:flex space-x-4">
-                <li><a href="index.html" class="text-white">Hem</a></li>
-                <li><a href="about.html" class="text-white">Om oss</a></li>
-                <li><a href="quote.html" class="text-white">Offertförfrågan</a></li>
-                <li><a href="contact.html" class="text-white">Kontakt</a></li>
-            </ul>
-        </nav>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Hem</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Om oss</a></li>
+                    <li class="nav-item"><a href="quote.html" class="nav-link">Offertförfrågan</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="video-container relative">
-        <video autoplay muted loop playsinline id="background-video" class="w-full h-full object-cover absolute inset-0">
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="content relative z-10 flex flex-col items-center justify-center h-screen bg-black bg-opacity-50">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="h-32 mb-8 logo-center">
-            <div class="flex space-x-4">
-                <a href="contact.html" class="bg-orange-500 text-white py-2 px-4 rounded-md text-lg hover:bg-orange-600 transition duration-300">Kontakta oss</a>
-                <a href="quote.html" class="bg-orange-500 text-white py-2 px-4 rounded-md text-lg hover:bg-orange-600 transition duration-300">Begär offert</a>
+        <div class="content d-flex flex-column justify-content-center align-items-center h-100">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="logo-center mb-4" style="height: 100px;">
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-warning btn-lg mx-2">Kontakta oss</a>
+                <a href="quote.html" class="btn btn-warning btn-lg mx-2">Begär offert</a>
             </div>
         </div>
     </div>
-    <footer class="bg-gray-800 bg-opacity-80 text-white text-center p-4 mt-8">
-        <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
-        <p>Kontakt: <a href="tel:+46761072796" class="text-orange-500">076-1072796</a> | <a href="mailto:info@hustoftasmide.se" class="text-orange-500">info@hustoftasmide.se</a></p>
+    <footer class="footer text-center p-3">
+        <div class="container">
+            <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
+            <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
+        </div>
     </footer>
-    <script>
-        const menuButton = document.getElementById('hamburger-menu');
-        const menu = document.getElementById('menu');
-        menuButton.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
