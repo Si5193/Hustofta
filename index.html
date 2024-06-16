@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -24,75 +25,101 @@
             height: 100%;
             object-fit: cover;
             transform: translate(-50%, -50%);
-            z-index: -1;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+        header .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .logo img {
+            height: 50px;
+        }
+        header .navbar-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
         }
         .content {
-            position: relative;
-            z-index: 10;
-            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
             text-align: center;
-            padding: 2rem;
         }
-        .header, .footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-        }
-        .footer a {
-            color: orange;
-        }
-        .logo-center {
-            margin: 0 auto;
+        .content .buttons {
+            margin-top: 20px;
         }
         .btn-custom {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
             background-color: orange;
-            border-color: orange;
-            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
         }
         .btn-custom:hover {
-            background-color: darkorange;
-            border-color: darkorange;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
         }
     </style>
 </head>
-<body id="top">
-    <header class="header p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="h-12">
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 logo">
+                    <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
+                </div>
+                <div class="col-6 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white;"></i></span>
+                    </button>
+                </div>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Hem</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">Om oss</a></li>
-                    <li class="nav-item"><a href="quote.html" class="nav-link">Offertförfrågan</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
     <div class="video-container">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline id="background-video">
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="content d-flex flex-column justify-content-center align-items-center h-100">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="logo-center mb-4" style="height: 100px;">
-            <div class="btn-group">
-                <a href="contact.html" class="btn btn-custom btn-lg mx-2" data-aos="fade-up">Kontakta oss</a>
-                <a href="quote.html" class="btn btn-custom btn-lg mx-2" data-aos="fade-up">Begär offert</a>
+    </div>
+    <div class="content">
+        <div>
+            <div class="logo mb-4">
+                <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" style="height: 100px;">
+            </div>
+            <div class="buttons">
+                <a href="contact.html" class="btn btn-custom">Kontakta oss</a>
+                <a href="quote.html" class="btn btn-custom">Begär offert</a>
             </div>
         </div>
     </div>
-    <footer class="footer text-center p-3">
-        <div class="container">
-            <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
-            <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
+        <p>Kontakt: <a href="tel:+46761072796" style="color: #fff;">076-1072796</a> | <a href="mailto:info@hustoftasmide.se" style="color: #fff;">info@hustoftasmide.se</a></p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
