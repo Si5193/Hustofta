@@ -29,6 +29,9 @@
         .header-bg {
             background: rgba(0, 0, 0, 0.6);
         }
+        .footer-bg {
+            background: rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body class="font-roboto">
@@ -60,23 +63,23 @@
                 <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="h-36 animate__animated animate__fadeInDown">
             </div>
             <section class="space-y-4 animate__animated animate__fadeIn">
-                <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full animate__animated animate__bounceIn">
-                    Kontakta oss
-                </button>
-                <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full animate__animated animate__bounceIn">
-                    Begär offert
-                </button>
+                <a href="contact.html" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-full animate__animated animate__bounceIn">Kontakta oss</a>
+                <a href="quote.html" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-full animate__animated animate__bounceIn">Begär offert</a>
             </section>
         </main>
-        <footer class="bg-gray-800 text-white text-center p-4">
+        <footer class="footer-bg text-white text-center p-4">
             <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
             <p>Kontakt: <a href="tel:+46761072796" class="text-orange-500">076-1072796</a> | <a href="mailto:info@hustoftasmide.se" class="text-orange-500">info@hustoftasmide.se</a></p>
         </footer>
     </div>
     <script>
-        document.getElementById('menu-button').addEventListener('click', function() {
+        document.getElementById('menu-button').addEventListener('click', function () {
             var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
         });
     </script>
 </body>
