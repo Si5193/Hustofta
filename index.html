@@ -11,6 +11,8 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .video-container {
             position: relative;
@@ -56,9 +58,10 @@
             height: 100vh;
             color: #fff;
             text-align: center;
+            flex-direction: column;
         }
-        .content .buttons {
-            margin-top: 20px;
+        .content .logo {
+            margin-bottom: 20px;
         }
         .btn-custom {
             margin: 0 10px;
@@ -70,6 +73,7 @@
             border: none;
             border-radius: 5px;
             transition: transform 0.3s ease-in-out;
+            text-decoration: none;
         }
         .btn-custom:hover {
             transform: scale(1.1);
@@ -84,13 +88,13 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" style="height: 50px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars" style="color: white;"></i>
+                    <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
@@ -110,14 +114,12 @@
         </video>
     </div>
     <div class="content">
-        <div>
-            <div class="logo mb-4">
-                <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" style="height: 100px;">
-            </div>
-            <div class="buttons">
-                <a href="contact.html" class="btn btn-custom">Kontakta oss</a>
-                <a href="quote.html" class="btn btn-custom">Begär offert</a>
-            </div>
+        <div class="logo">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" style="height: 100px;">
+        </div>
+        <div class="buttons">
+            <a href="contact.html" class="btn btn-custom">Kontakta oss</a>
+            <a href="quote.html" class="btn btn-custom">Begär offert</a>
         </div>
     </div>
     <footer>
