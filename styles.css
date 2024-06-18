@@ -84,6 +84,7 @@ body {
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
+    backdrop-filter: blur(10px); /* För att ge en suddig effekt på bakgrunden */
 }
 
 .fade-in {
