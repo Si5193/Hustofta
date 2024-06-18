@@ -31,10 +31,8 @@
     </header>
     <section id="home" class="section home-section">
         <div class="hero-content">
-            <div class="centered-logo">
-                <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="hero-logo">
-            </div>
-            <button class="hero-button" onclick="scrollToSection('contact')">Kontakta oss</button>
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="hero-logo">
+            <button class="hero-button" onclick="scrollToSection('about')">Om oss</button>
             <button class="hero-button" onclick="scrollToSection('quote')">Begär offert</button>
         </div>
     </section>
@@ -48,13 +46,10 @@
         <form id="quote-form" class="quote-form">
             <label for="name">Namn:</label>
             <input type="text" id="name" name="name" required>
-            
             <label for="email">E-post:</label>
             <input type="email" id="email" name="email" required>
-            
             <label for="message">Beskrivning:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-            
             <button type="submit" class="form-button">Skicka</button>
         </form>
     </section>
