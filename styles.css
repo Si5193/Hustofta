@@ -82,4 +82,92 @@ video {
     justify-content: center;
     align-items: center;
     color: white;
-    background: rgba(0, 0
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero-button:hover {
+    transform: scale(1.1);
+}
+
+.section-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+    .navbar a {
+        margin: 15px 0;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-form label {
+    margin-top: 10px;
+}
+
+.quote-form input, .quote-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: darkorange;
+}
