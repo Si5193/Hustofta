@@ -26,7 +26,7 @@
             </div>
         </div>
     </header>
-    <div class="video-container">
+    <div class="video-container" id="home">
         <video autoplay muted loop playsinline id="background-video">
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -38,13 +38,14 @@
         </div>
     </div>
     <main>
-        <section id="how-it-works" class="section">
+        <section id="how-it-works" class="section fade-in">
             <div class="container">
                 <h2>Hur fungerar det?</h2>
                 <img src="https://i.imgur.com/WjveVFt.png" alt="Hur fungerar det?" class="img-fluid">
             </div>
         </section>
-        <section id="quote" class="section">
+        <hr class="section-divider">
+        <section id="quote" class="section fade-in">
             <div class="container">
                 <h2>Offertförfrågan</h2>
                 <form id="quote-form" class="quote-form">
@@ -64,14 +65,16 @@
                 </form>
             </div>
         </section>
-        <section id="about" class="section">
+        <hr class="section-divider">
+        <section id="about" class="section fade-in">
             <div class="container">
                 <h2>Om oss</h2>
                 <p>Hustofta Smide & Mekaniska är ditt förstahandsval för svetsreparationer, metallbearbetning och nyproduktioner. Drivet av Alexander och Stefan, kombinerar vårt familjeföretag erfarenhet och modern teknik för att leverera högkvalitativa lösningar. Med verkstad mellan Höganäs och Ingelsträde, är vi redo för ditt nästa projekt. Välj oss för pålitlighet och överlägsen service.</p>
                 <button class="section-button btn btn-primary mt-3" onclick="scrollToSection('contact')">Kontakta oss</button>
             </div>
         </section>
-        <section id="contact" class="section">
+        <hr class="section-divider">
+        <section id="contact" class="section fade-in">
             <div class="container">
                 <h2>Kontakt</h2>
                 <p>Kontaktuppgifter och formulär för att nå oss...</p>
