@@ -79,7 +79,7 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 2.5rem 2rem; /* Halvera padding */
+    padding: 1.5rem 1rem; /* Ytterligare minskad padding */
     margin-top: 100vh; /* Flytta ner sektionerna */
     position: relative;
     z-index: 2;
@@ -103,7 +103,7 @@ body {
     height: 1px;
     background: #000;
     margin: 0;
-    margin-bottom: 2.5rem; /* Lägg till margin-bottom för att skapa avstånd */
+    margin-bottom: 1.5rem; /* Ytterligare minskad margin-bottom */
 }
 
 /* Form Styles */
