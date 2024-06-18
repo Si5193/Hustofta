@@ -81,7 +81,6 @@ body {
 /* Section Styles */
 .section {
     padding: 1rem 1rem; /* Minska padding */
-    margin-top: 100vh; /* Flytta ner sektionerna */
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
@@ -140,4 +139,20 @@ body {
     padding: 1rem;
     background: #333;
     color: white;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 0.5rem 0.5rem; /* Ytterligare minskad padding för mobiler */
+    }
+
+    .hero-logo {
+        max-width: 150px;
+    }
+
+    .hero-button {
+        padding: 0.3rem 0.8rem;
+        margin: 0.3rem;
+    }
 }
