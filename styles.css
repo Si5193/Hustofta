@@ -9,6 +9,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 /* Video Container */
@@ -79,7 +80,8 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 3rem 2rem; /* Minska padding för att reducera mellanrum */
+    padding: 5rem 2rem;
+    margin-top: 100vh; /* Flytta ner sektionerna */
     position: relative;
     z-index: 2;
     background: rgba(211, 211, 211, 0.9); /* Ljusgrå, lätt transparent bakgrund */
