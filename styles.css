@@ -20,11 +20,28 @@ body {
     height: 50px;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: orange;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .video-container {
@@ -47,6 +64,14 @@ video {
     padding: 100px 20px;
     text-align: center;
     background: #f4f4f4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .home-section {
@@ -95,15 +120,22 @@ video {
 }
 
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-    }
     .navbar {
-        display: flex;
+        display: none;
         flex-direction: column;
-        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
     }
     .navbar a {
-        margin: 10px 0;
+        margin: 15px 0;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
     }
 }
