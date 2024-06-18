@@ -81,11 +81,14 @@ body {
 /* Section Styles */
 .section {
     padding: 1rem 1rem; /* Minska padding */
-    margin-top: 0; /* Ta bort margin-top */
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
     backdrop-filter: blur(10px); /* För att ge en suddig effekt på bakgrunden */
+}
+
+#how-it-works {
+    margin-top: 100vh; /* Flytta ner den första sektionen */
 }
 
 .fade-in {
