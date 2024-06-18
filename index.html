@@ -45,7 +45,18 @@
     </section>
     <section id="quote" class="section fade-in">
         <h2>Offertförfrågan</h2>
-        <p>Fyll i formuläret för att begära en offert...</p>
+        <form id="quote-form" class="quote-form">
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Beskrivning:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit" class="form-button">Skicka</button>
+        </form>
     </section>
     <section id="contact" class="section fade-in">
         <h2>Kontakt</h2>
