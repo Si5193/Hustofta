@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
-    background: #f4f4f4;
+    background: #f0f0f0; /* Ändrad bakgrundsfärg till ljusgrå */
 }
 
 /* Video Container */
@@ -103,6 +103,7 @@ body {
     z-index: 2;
     background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
     backdrop-filter: blur(10px); /* För att ge en suddig effekt på bakgrunden */
+    background: #f0f0f0; /* Ändrad bakgrundsfärg till ljusgrå */
 }
 
 #how-it-works {
