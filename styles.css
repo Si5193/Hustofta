@@ -80,9 +80,10 @@ body {
 /* Section Styles */
 .section {
     padding: 5rem 2rem;
+    margin-top: 100vh; /* Flytta ner sektionerna */
     position: relative;
     z-index: 2;
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
 }
 
 .fade-in {
