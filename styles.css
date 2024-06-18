@@ -9,6 +9,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 /* Video Container */
@@ -79,7 +80,7 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 1rem 1rem; /* Ytterligare minskad padding */
+    padding: 1rem 1rem; /* Minska padding */
     margin-top: 100vh; /* Flytta ner sektionerna */
     position: relative;
     z-index: 2;
@@ -98,12 +99,11 @@ body {
     }
 }
 
+/* Divider Styles */
 .section-divider {
-    border: 0;
     height: 1px;
     background: #000;
     margin: 0;
-    margin-bottom: 1rem; /* Ytterligare minskad margin-bottom */
 }
 
 /* Form Styles */
@@ -118,7 +118,7 @@ body {
 
 .quote-form input, .quote-form textarea {
     padding: 0.5rem;
-    margin-bottom: 0.5rem; /* Ytterligare minskad margin-bottom */
+    margin-bottom: 0.5rem;
     border: 1px solid #ccc;
 }
 
