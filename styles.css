@@ -79,7 +79,7 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 1.5rem 1rem; /* Ytterligare minskad padding */
+    padding: 1rem 1rem; /* Ytterligare minskad padding */
     margin-top: 100vh; /* Flytta ner sektionerna */
     position: relative;
     z-index: 2;
@@ -103,7 +103,7 @@ body {
     height: 1px;
     background: #000;
     margin: 0;
-    margin-bottom: 1.5rem; /* Ytterligare minskad margin-bottom */
+    margin-bottom: 1rem; /* Ytterligare minskad margin-bottom */
 }
 
 /* Form Styles */
@@ -118,7 +118,7 @@ body {
 
 .quote-form input, .quote-form textarea {
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Ytterligare minskad margin-bottom */
     border: 1px solid #ccc;
 }
 
