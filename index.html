@@ -17,29 +17,45 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="about.html">Om oss</a></li>
-                <li><a href="quote.html">Offertförfrågan</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#about">Om oss</a></li>
+                <li><a href="#quote">Offertförfrågan</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="video-container">
+    <div class="video-container" id="home">
         <video autoplay muted loop playsinline id="background-video">
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>
-
-    <div class="content">
-        <div class="hero-content">
-            <div class="buttons">
-                <a href="contact.html" class="btn">Kontakta oss</a>
-                <a href="quote.html" class="btn">Begär offert</a>
-            </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="hero-logo">
         </div>
     </div>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>Om oss</h2>
+            <p>Vi är ett smidesföretag som specialiserar oss på högkvalitativa smidesprodukter och mekaniska tjänster...</p>
+        </div>
+    </section>
+
+    <section id="quote">
+        <div class="section-content">
+            <h2>Offertförfrågan</h2>
+            <p>Fyll i formuläret för att begära en offert...</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-content">
+            <h2>Kontakt</h2>
+            <p>Kontaktuppgifter och formulär för att nå oss...</p>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
@@ -49,6 +65,22 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const heroSection = document.querySelector('#home');
+            const overlay = document.querySelector('.overlay');
+            let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            overlay.style.opacity = Math.min(scrollPosition / heroSection.clientHeight, 1);
         });
     </script>
 </body>
