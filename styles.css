@@ -45,6 +45,7 @@ body {
     align-items: center;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 /* Header Styles */
@@ -79,9 +80,8 @@ body {
 /* Section Styles */
 .section {
     padding: 5rem 2rem;
-    background: white;
-    z-index: 1;
     position: relative;
+    z-index: 2;
 }
 
 .fade-in {
@@ -93,6 +93,13 @@ body {
     to {
         opacity: 1;
     }
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #000;
+    margin: 0;
 }
 
 /* Form Styles */
