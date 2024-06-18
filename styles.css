@@ -1,19 +1,42 @@
-body {
+/* Reset CSS */
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header {
-    position: fixed;
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.video-container {
+    position: absolute;
     top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* Header Styles */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 
@@ -23,151 +46,105 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
+    margin-left: 1rem;
     font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: orange;
 }
 
 .hamburger {
     display: none;
-    font-size: 1.5em;
     cursor: pointer;
 }
 
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+.hamburger i {
+    font-size: 1.5rem;
+    color: white;
 }
 
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.section {
-    padding: 150px 20px;
-    text-align: center;
-    background: #f4f4f4;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.section.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Hero Section */
 .home-section {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-logo {
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.hero-button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.hero-button:hover {
-    transform: scale(1.1);
-}
-
-.section-button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.footer {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-    }
-    .navbar a {
-        margin: 15px 0;
-    }
-    .navbar.active {
-        display: flex;
-    }
-    .hamburger {
-        display: block;
+.hero-logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.hero-button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background: #555;
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 2rem;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }
 
+/* Form Styles */
 .quote-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .quote-form label {
-    margin-top: 10px;
+    margin: 0.5rem 0;
 }
 
 .quote-form input, .quote-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 .form-button {
-    background-color: orange;
-    color: white;
+    padding: 0.5rem 1rem;
     border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
+    background: #333;
+    color: white;
     cursor: pointer;
 }
 
 .form-button:hover {
-    background-color: darkorange;
+    background: #555;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
