@@ -104,10 +104,9 @@ body {
 
 /* Divider Styles */
 .section-divider {
-    height: 1px;
+    height: 2px;
     background: #000;
     margin: 0;
-    margin-bottom: -1px; /* Förhindra extra mellanrum */
 }
 
 /* Form Styles */
