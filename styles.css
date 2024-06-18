@@ -81,6 +81,7 @@ body {
 /* Section Styles */
 .section {
     padding: 1rem 1rem; /* Minska padding */
+    margin-top: 0; /* Ta bort margin-top */
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
@@ -103,6 +104,7 @@ body {
     height: 1px;
     background: #000;
     margin: 0;
+    margin-bottom: -1px; /* Förhindra extra mellanrum */
 }
 
 /* Form Styles */
