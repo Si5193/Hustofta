@@ -4,63 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smidesföretag</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo">
             <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
         </div>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Hem</a></li>
-                <li><a href="#about">Om oss</a></li>
-                <li><a href="#quote">Offertförfrågan</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
+        <nav id="navbar">
+            <a href="#home">Hem</a>
+            <a href="#about">Om oss</a>
+            <a href="#quote">Offertförfrågan</a>
+            <a href="#contact">Kontakt</a>
         </nav>
+        <div id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <div class="video-container" id="home">
+    <section id="home">
         <video autoplay muted loop playsinline id="background-video">
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
         <div class="content">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="hero-logo">
+            <div class="center-logo">
+                <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp">
+            </div>
             <div class="buttons">
                 <a href="#contact" class="button">Kontakta oss</a>
                 <a href="#quote" class="button">Begär offert</a>
             </div>
         </div>
-    </div>
+    </section>
 
     <section id="about">
-        <div class="section-content">
-            <h2>Om oss</h2>
-            <p>Vi är ett smidesföretag som specialiserar oss på högkvalitativa smidesprodukter och mekaniska tjänster...</p>
-        </div>
+        <h2>Om oss</h2>
+        <p>Vi är ett smidesföretag som specialiserar oss på högkvalitativa smidesprodukter och mekaniska tjänster...</p>
     </section>
 
     <section id="quote">
-        <div class="section-content">
-            <h2>Offertförfrågan</h2>
-            <p>Fyll i formuläret för att begära en offert...</p>
-        </div>
+        <h2>Offertförfrågan</h2>
+        <p>Fyll i formuläret för att begära en offert...</p>
     </section>
 
     <section id="contact">
-        <div class="section-content">
-            <h2>Kontakt</h2>
-            <p>Kontaktuppgifter och formulär för att nå oss...</p>
-        </div>
+        <h2>Kontakt</h2>
+        <p>Kontaktuppgifter och formulär för att nå oss...</p>
     </section>
 
     <footer>
@@ -68,26 +64,6 @@
         <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        window.addEventListener('scroll', function() {
-            const heroSection = document.querySelector('#home');
-            const overlay = document.querySelector('.overlay');
-            let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-            overlay.style.opacity = Math.min(scrollPosition / heroSection.clientHeight, 1);
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
