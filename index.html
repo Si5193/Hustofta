@@ -10,70 +10,74 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header id="header" class="header navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Hem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">Hur fungerar det?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quote">Offertförfrågan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Om oss</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <div class="video-container">
         <video autoplay muted loop playsinline id="background-video">
             <source src="https://videos.pexels.com/video-files/5846583/5846583-hd_1080_1920_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>
-    <header id="header" class="header">
-        <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="logo">
-            <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="header-logo mx-auto">
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Hem</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Om oss</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quote">Offertförfrågan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section id="home" class="section home-section d-flex align-items-center">
-        <div class="container text-center">
+        <div class="overlay">
             <img src="https://i.imgur.com/mPm0gZh.png" alt="Logotyp" class="hero-logo">
-            <button class="hero-button btn btn-primary mt-3" onclick="scrollToSection('about')">Om oss</button>
+            <button class="hero-button btn btn-primary mt-3" onclick="scrollToSection('how-it-works')">Hur fungerar det?</button>
             <button class="hero-button btn btn-secondary mt-3" onclick="scrollToSection('quote')">Begär offert</button>
         </div>
-    </section>
-    <section id="about" class="section fade-in">
-        <div class="container">
-            <h2>Om oss</h2>
-            <p>Hustofta Smide & Mekaniska är ditt förstahandsval för svetsreparationer, metallbearbetning och nyproduktioner. Drivet av Alexander och Stefan, kombinerar vårt familjeföretag erfarenhet och modern teknik för att leverera högkvalitativa lösningar. Med verkstad mellan Höganäs och Ingelsträde, är vi redo för ditt nästa projekt. Välj oss för pålitlighet och överlägsen service.</p>
-            <button class="section-button btn btn-primary mt-3" onclick="scrollToSection('contact')">Kontakta oss</button>
-        </div>
-    </section>
-    <section id="quote" class="section fade-in">
-        <div class="container">
-            <h2>Offertförfrågan</h2>
-            <form id="quote-form" class="quote-form">
-                <div class="form-group">
-                    <label for="name">Namn:</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-post:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Beskrivning:</label>
-                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="form-button btn btn-primary mt-3">Skicka</button>
-            </form>
-        </div>
-    </section>
-    <section id="contact" class="section fade-in">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <p>Kontaktuppgifter och formulär för att nå oss...</p>
-        </div>
-    </section>
+    </div>
+    <main>
+        <section id="how-it-works" class="section">
+            <div class="container">
+                <h2>Hur fungerar det?</h2>
+                <img src="https://i.imgur.com/WjveVFt.png" alt="Hur fungerar det?" class="img-fluid">
+            </div>
+        </section>
+        <section id="quote" class="section">
+            <div class="container">
+                <h2>Offertförfrågan</h2>
+                <form id="quote-form" class="quote-form">
+                    <div class="form-group">
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-post:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Beskrivning:</label>
+                        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="form-button btn btn-primary mt-3">Skicka</button>
+                </form>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Om oss</h2>
+                <p>Hustofta Smide & Mekaniska är ditt förstahandsval för svetsreparationer, metallbearbetning och nyproduktioner. Drivet av Alexander och Stefan, kombinerar vårt familjeföretag erfarenhet och modern teknik för att leverera högkvalitativa lösningar. Med verkstad mellan Höganäs och Ingelsträde, är vi redo för ditt nästa projekt. Välj oss för pålitlighet och överlägsen service.</p>
+                <button class="section-button btn btn-primary mt-3" onclick="scrollToSection('contact')">Kontakta oss</button>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <p>Kontaktuppgifter och formulär för att nå oss...</p>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="container text-center">
             <p>&copy; 2024 Smidesföretag. Alla rättigheter förbehållna.</p>
