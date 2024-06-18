@@ -80,7 +80,11 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 1rem 1rem; /* Minska padding */
+    padding: 1rem;
+    min-height: 100vh; /* Sektion täcker hela skärmen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.9); /* Vit, lätt transparent bakgrund */
@@ -107,6 +111,12 @@ body {
     height: 2px;
     background: #000;
     margin: 0;
+}
+
+/* "Hur fungerar det?" Section */
+.hur-fungerar-det img {
+    max-width: 80%; /* Gör bilden större */
+    height: auto;
 }
 
 /* Form Styles */
@@ -158,5 +168,9 @@ body {
     .hero-button {
         padding: 0.3rem 0.8rem;
         margin: 0.3rem;
+    }
+
+    .hur-fungerar-det img {
+        max-width: 100%; /* Anpassa bildstorlek för mobiler */
     }
 }
