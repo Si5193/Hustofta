@@ -54,6 +54,16 @@ body {
 .header {
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: padding 0.3s, background 0.3s;
+}
+
+.header.shrink {
+    padding: 0.5rem 0;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .navbar-nav .nav-link {
@@ -74,10 +84,12 @@ body {
     background: #333;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .hero-button:hover {
     background: #555;
+    transform: scale(1.1);
 }
 
 /* Section Styles */
@@ -143,10 +155,12 @@ body {
     background: #333;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .form-button:hover {
     background: #555;
+    transform: scale(1.1);
 }
 
 /* Footer Styles */
@@ -175,4 +189,33 @@ body {
     .hur-fungerar-det img {
         max-width: 100%; /* Anpassa bildstorlek för mobiler */
     }
+}
+
+/* Back to Top Button */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#topBtn:hover {
+    background-color: #555;
+}
+
+/* Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
