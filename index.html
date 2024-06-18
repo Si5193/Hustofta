@@ -6,8 +6,6 @@
     <title>Hustofta Smide & Mekaniska</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -40,13 +38,35 @@
         </div>
     </div>
     <main>
-        <section id="how-it-works" class="section fade-in hur-fungerar-det" style="margin-top: 100vh;">
+        <section id="how-it-works" class="section fade-in">
             <div class="container">
                 <h2>Hur fungerar det?</h2>
-                <img src="https://i.imgur.com/gyniFRK.png" alt="Hur fungerar det?" class="img-fluid">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="step-icon">
+                            <i class="fas fa-file-alt fa-3x"></i>
+                        </div>
+                        <h3>Fyll i Offertförfrågan</h3>
+                        <p>På våran sida kan du fylla i en offertförfrågan här beskriver du vad du har för idé/behov. Det går även bra att ringa oss!</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-icon">
+                            <i class="fas fa-phone fa-3x"></i>
+                        </div>
+                        <h3>Vi Kontaktar Dig</h3>
+                        <p>Vi kontaktar dig antingen via telefon eller mail för vidare diskussioner. Vid lättare objekt kan vi skicka en offert direkt.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-icon">
+                            <i class="fas fa-truck fa-3x"></i>
+                        </div>
+                        <h3>Vi Levererar</h3>
+                        <p>När vi är överens om detaljerna så levererar vi enligt önskemål.</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="section-divider"></div>
+        <hr class="section-divider">
         <section id="quote" class="section fade-in">
             <div class="container">
                 <h2>Offertförfrågan</h2>
@@ -67,7 +87,7 @@
                 </form>
             </div>
         </section>
-        <div class="section-divider"></div>
+        <hr class="section-divider">
         <section id="about" class="section fade-in">
             <div class="container">
                 <h2>Om oss</h2>
@@ -75,7 +95,7 @@
                 <button class="section-button btn btn-primary mt-3" onclick="scrollToSection('contact')">Kontakta oss</button>
             </div>
         </section>
-        <div class="section-divider"></div>
+        <hr class="section-divider">
         <section id="contact" class="section fade-in">
             <div class="container">
                 <h2>Kontakt</h2>
@@ -89,12 +109,9 @@
             <p>Kontakt: <a href="tel:+46761072796">076-1072796</a> | <a href="mailto:info@hustoftasmide.se">info@hustoftasmide.se</a></p>
         </div>
     </footer>
-    <button onclick="topFunction()" id="topBtn" title="Till toppen">↑</button>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
