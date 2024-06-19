@@ -84,13 +84,17 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 5rem 2rem;
-    margin-top: 100vh; /* Flytta ner sektionerna under videon */
+    padding: 3rem 2rem; /* Minska padding för att reducera avstånd mellan sektioner */
+    margin-top: 5rem; /* Justera margin-top för att minska avstånd */
     position: relative;
     z-index: 2;
     background: rgba(211, 211, 211, 0.9); /* Ljusgrå, lätt transparent bakgrund */
     backdrop-filter: blur(10px); /* För att ge en suddig effekt på bakgrunden */
     overflow: hidden;
+}
+
+.section:first-of-type {
+    margin-top: 100vh; /* Flytta ner första sektionen under videon */
 }
 
 .fade-in {
